@@ -1,0 +1,23 @@
+---
+title: "Exercise 1"
+author: '43182'
+date: "2024-10-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# This chunk transform the iris data to include a column on petal area
+
+transform_iris <- function(data){
+  data$Petal.Area <- data$Petal.Length * data$Petal.Width
+  return(data)
+}
+
+iris_new <- transform_iris(iris)
+
+head(iris_new)
+```
