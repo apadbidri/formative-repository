@@ -21,3 +21,16 @@ iris_new <- transform_iris(iris)
 
 head(iris_new)
 ```
+
+```{r}
+# This chunk transform the iris data to include a column on sepal area
+
+transform_iris_sepal <- function(data){
+  data$Sepal.Area <- data$Sepal.Length * data$Sepal.Width
+  return(data)
+}
+
+iris_with_sepal <- transform_iris_sepal(iris)
+
+head(iris_with_sepal)
+```

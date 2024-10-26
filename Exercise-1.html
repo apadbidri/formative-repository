@@ -374,6 +374,23 @@ head(iris_new)</code></pre>
 ## 4          4.6         3.1          1.5         0.2  setosa       0.30
 ## 5          5.0         3.6          1.4         0.2  setosa       0.28
 ## 6          5.4         3.9          1.7         0.4  setosa       0.68</code></pre>
+<pre class="r"><code># This chunk transform the iris data to include a column on sepal area
+
+transform_iris_sepal &lt;- function(data){
+  data$Sepal.Area &lt;- data$Sepal.Length * data$Sepal.Width
+  return(data)
+}
+
+iris_with_sepal &lt;- transform_iris_sepal(iris)
+
+head(iris_with_sepal)</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Sepal.Area
+## 1          5.1         3.5          1.4         0.2  setosa      17.85
+## 2          4.9         3.0          1.4         0.2  setosa      14.70
+## 3          4.7         3.2          1.3         0.2  setosa      15.04
+## 4          4.6         3.1          1.5         0.2  setosa      14.26
+## 5          5.0         3.6          1.4         0.2  setosa      18.00
+## 6          5.4         3.9          1.7         0.4  setosa      21.06</code></pre>
 
 
 
