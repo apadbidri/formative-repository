@@ -375,9 +375,9 @@ head(transformed_iris)</code></pre>
 ## 6          5.4         3.9          1.7         0.4  setosa       0.68</code></pre>
 <pre class="r"><code># This chunk of code calculates and adds a column for Sepal area to the dataset Iris
 
-transform_iris_sep &lt;- function(data) {
-  data$Sepal.Area &lt;- data$Sepal.Length * data$Sepal.Width
-  return(data)
+transform_iris_sep &lt;- function(data_new) {
+  data_new$Sepal.Area &lt;- data_new$Sepal.Length * data_new$Sepal.Width
+  return(data_new)
 }
 
 transformed_iris_sep &lt;- transform_iris_sep(iris)
