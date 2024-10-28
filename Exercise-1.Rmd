@@ -20,3 +20,15 @@ transform_iris <- function(data) {
 transformed_iris <- transform_iris(iris)
 head(transformed_iris)
 ```
+
+```{r}
+# This chunk of code calculates and adds a column for Sepal area to the dataset Iris
+
+transform_iris_sep <- function(data) {
+  data$Sepal.Area <- data$Sepal.Length * data$Sepal.Width
+  return(data)
+}
+
+transformed_iris_sep <- transform_iris_sep(iris)
+head(transformed_iris_sep)
+```
