@@ -360,7 +360,7 @@ display: none;
 <pre class="r"><code># This chunk of code calculates and adds a column for Petal area to the dataset Iris
 
 transform_iris &lt;- function(data) {
-  data$Petal.Area &lt;- data$Petal.Length * data$Petal.Width
+  data$Petal.Area &lt;- data$Petal.Length * data$Petal.Width # Calculates Petal area 
   return(data)
 }
 
@@ -376,7 +376,7 @@ head(transformed_iris)</code></pre>
 <pre class="r"><code># This chunk of code calculates and adds a column for Sepal area to the dataset Iris
 
 transform_iris_sep &lt;- function(data_new) {
-  data_new$Sepal.Area &lt;- data_new$Sepal.Length * data_new$Sepal.Width
+  data_new$Sepal.Area &lt;- data_new$Sepal.Length * data_new$Sepal.Width # Calculates Sepal Area 
   return(data_new)
 }
 
